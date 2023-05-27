@@ -1,6 +1,8 @@
 import 'package:credithour/%D9%85%D9%88%D8%A7%D8%AF%20%D9%85%D8%B3%D8%AC%D9%84%D8%A9.dart';
 import 'package:credithour/%D9%86%D8%AA%D8%A7%D9%8A%D8%AC%20%D8%A7%D9%84%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86%D8%A7%D8%AA.dart';
 import 'package:credithour/Material.dart';
+import 'package:credithour/exam_screen.dart';
+import 'package:credithour/profile.dart';
 import 'package:flutter/material.dart';
 class homee extends StatelessWidget {
   @override
@@ -24,14 +26,25 @@ class homee extends StatelessWidget {
               children: [
                SizedBox (height: 80),
 
-                Icon(Icons.notifications_active,size: 30, ),
+                IconButton(
+                    icon: Icon (Icons.menu_open,
+                      size: 40.0,
+                    ),
+                    onPressed: (){
+                      Navigator.push(context,
+                        MaterialPageRoute
+                          (builder: (context)=> profile(),
+                        ),
+                      );
+                    }
+                ),
                 SizedBox (width: 80),
                 Text('مرحبا,اسم الطالب',
                   style: TextStyle(
                     fontSize: 22,
                   ),
                 ),
-                SizedBox (width: 20),
+                SizedBox (width: 15),
                 CircleAvatar(
                   radius: 35.0,
                   backgroundImage: AssetImage('images/stude.jpg'),
@@ -86,7 +99,7 @@ class homee extends StatelessWidget {
               child: MaterialButton(onPressed: (){
                 Navigator.push(context,
                   MaterialPageRoute
-                    (builder: (context)=> TaskScreen(),
+                    (builder: (context)=> ExamScreen(),
                   ),
                 );},
                 child: Text('نتايج الامتحانات',

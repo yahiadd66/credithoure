@@ -1,5 +1,5 @@
-import 'package:credithour/Login_Screen.dart';
-import 'package:credithour/New_password.dart';
+import 'package:credithour/login.%20sing/Login_Screen.dart';
+import 'package:credithour/forgot%20password/New_password.dart';
 import 'package:flutter/material.dart';
 
 class code extends StatelessWidget

@@ -1,8 +1,11 @@
-import 'package:credithour/%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%AF.dart';
+
 import 'package:credithour/%D9%85%D9%88%D8%A7%D8%AF%20%D9%85%D8%B3%D8%AC%D9%84%D8%A9.dart';
 import 'package:credithour/%D9%86%D8%AA%D8%A7%D9%8A%D8%AC%20%D8%A7%D9%84%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86%D8%A7%D8%AA.dart';
+import 'package:credithour/exam_screen.dart';
 import 'package:credithour/home.dart';
 import 'package:flutter/material.dart';
+
+import 'تسجل الموااد..dart';
 
 class matreil extends StatelessWidget
 {
@@ -88,7 +91,7 @@ class matreil extends StatelessWidget
                                            onPressed: (){
                                              Navigator.push(context,
                                                MaterialPageRoute
-                                                 (builder: (context)=> Materialselection(),
+                                                 (builder: (context)=>Materialselection (),
                                                ),
                                              );
                                            }
@@ -811,7 +814,7 @@ class matreil extends StatelessWidget
                            TextButton(onPressed: (){
                              Navigator.push(context,
                                MaterialPageRoute
-                                 (builder: (context)=> TaskScreen(),
+                                 (builder: (context)=> ExamScreen(),
                                ),
                              );
                            }, child: Text('نتائج الامتحانات',style: TextStyle(fontSize: 10,),),),

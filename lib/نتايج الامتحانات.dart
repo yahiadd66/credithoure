@@ -1,5 +1,7 @@
+
 import 'package:credithour/%D9%85%D9%88%D8%A7%D8%AF%20%D9%85%D8%B3%D8%AC%D9%84%D8%A9.dart';
 import 'package:credithour/Material.dart';
+import 'package:credithour/exam_screen.dart';
 import 'package:credithour/home.dart';
 import 'package:flutter/material.dart';
 
@@ -310,6 +312,7 @@ class TaskScreen extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(height: 30,),
             Column(
               children:
               [
@@ -378,7 +381,7 @@ class TaskScreen extends StatelessWidget {
                             TextButton(onPressed: (){
                               Navigator.push(context,
                                 MaterialPageRoute
-                                  (builder: (context)=> TaskScreen(),
+                                  (builder: (context)=> ExamScreen(),
                                 ),
                               );
                             }, child: Text('نتائج الامتحانات',style: TextStyle(fontSize: 10,),),),

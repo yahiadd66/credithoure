@@ -1,5 +1,5 @@
 
-import 'package:credithour/%D8%B3%D9%83%D8%B1%D9%8A%D9%86.dart';
+import 'package:credithour/splash/%D8%B3%D9%83%D8%B1%D9%8A%D9%86.dart';
 import 'package:flutter/material.dart';
 class splashscreen extends StatefulWidget
 {

@@ -1,6 +1,6 @@
-import 'package:credithour/code.dart';
+import 'package:credithour/forgot%20password/code.dart';
 import 'package:flutter/material.dart';
-import 'package:credithour/forgot%20password.dart';
+import 'package:credithour/forgot%20password/forgot%20password.dart';
 class Enteremail extends StatelessWidget
 {
   @override

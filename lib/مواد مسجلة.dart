@@ -1,6 +1,7 @@
-import 'package:credithour/%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%AF.dart';
+
 import 'package:credithour/%D9%86%D8%AA%D8%A7%D9%8A%D8%AC%20%D8%A7%D9%84%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86%D8%A7%D8%AA.dart';
 import 'package:credithour/Material.dart';
+import 'package:credithour/exam_screen.dart';
 import 'package:credithour/home.dart';
 import 'package:flutter/material.dart';
 class registere extends StatelessWidget
@@ -55,11 +56,13 @@ class registere extends StatelessWidget
                                     ),
                                     color: Colors.white
                                 ),
+                                clipBehavior: Clip.antiAliasWithSaveLayer,
                                 child: Column(
                                   children: [
                                     Row(
                                       children: [
                                         SizedBox(width:40,),
+
 
                                         Image(image: AssetImage('images/book.jpeg'),
                                           height: 80,
@@ -459,215 +462,6 @@ class registere extends StatelessWidget
                       ],
                     ),
                     SizedBox(height: 30,),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(21),
-                                        bottomRight:Radius.circular(21)  ),
-                                    border: Border.all(
-                                      width: 2,
-                                      color: Colors.black,
-                                    ),
-                                    color: Colors.white
-                                ),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        SizedBox(width:40,),
-
-                                        Image(image: AssetImage('images/book.jpeg'),
-                                          height: 80,
-                                          width: 80,
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 30,),
-                                    Row(
-                                      children: [
-                                        IconButton(
-                                            icon: Icon (Icons.arrow_back_outlined,
-                                              size: 30.0,
-                                            ),
-                                            onPressed: (){
-                                            }
-                                        ),
-                                        SizedBox(width:20,),
-                                        Text('أدارة افراد',
-                                          style: TextStyle(
-                                              fontSize: 20
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(21),
-                                        bottomRight:Radius.circular(21)  ),
-                                    border: Border.all(
-                                      width: 2,
-                                      color: Colors.black,
-                                    ),
-                                    color: Colors.white
-                                ),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        SizedBox(width:40,),
-
-                                        Image(image: AssetImage('images/book.jpeg'),
-                                          height: 80,
-                                          width: 80,
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 30,),
-                                    Row(
-                                      children: [
-                                        IconButton(
-                                            icon: Icon (Icons.arrow_back_outlined,
-                                              size: 30.0,
-                                            ),
-                                            onPressed: (){
-                                            }
-                                        ),
-                                        SizedBox(width:20,),
-                                        Text('أدارة افراد',
-                                          style: TextStyle(
-                                              fontSize: 20
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 30,),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(21),
-                                        bottomRight:Radius.circular(21)  ),
-                                    border: Border.all(
-                                      width: 2,
-                                      color: Colors.black,
-                                    ),
-                                    color: Colors.white
-                                ),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        SizedBox(width:40,),
-
-                                        Image(image: AssetImage('images/book.jpeg'),
-                                          height: 80,
-                                          width: 80,
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 30,),
-                                    Row(
-                                      children: [
-                                        IconButton(
-                                            icon: Icon (Icons.arrow_back_outlined,
-                                              size: 30.0,
-                                            ),
-                                            onPressed: (){
-                                            }
-                                        ),
-                                        SizedBox(width:20,),
-                                        Text('أدارة افراد',
-                                          style: TextStyle(
-                                              fontSize: 20
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(21),
-                                        bottomRight:Radius.circular(21)  ),
-                                    border: Border.all(
-                                      width: 2,
-                                      color: Colors.black,
-                                    ),
-                                    color: Colors.white
-                                ),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        SizedBox(width:40,),
-
-                                        Image(image: AssetImage('images/book.jpeg'),
-                                          height: 80,
-                                          width: 80,
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 30,),
-                                    Row(
-                                      children: [
-                                        IconButton(
-                                            icon: Icon (Icons.arrow_back_outlined,
-                                              size: 30.0,
-                                            ),
-                                            onPressed: (){
-                                            }
-                                        ),
-                                        SizedBox(width:20,),
-                                        Text('أدارة افراد',
-                                          style: TextStyle(
-                                              fontSize: 20
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
                   ],
                 ),
               ),
@@ -740,7 +534,7 @@ class registere extends StatelessWidget
                             TextButton(onPressed: (){
                               Navigator.push(context,
                                 MaterialPageRoute
-                                  (builder: (context)=> TaskScreen(),
+                                  (builder: (context)=> ExamScreen(),
                                 ),
                               );
                             }, child: Text('نتائج الامتحانات',style: TextStyle(fontSize: 10,),),),

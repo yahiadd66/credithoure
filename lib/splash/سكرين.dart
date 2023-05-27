@@ -1,7 +1,7 @@
-import 'package:credithour/Login_Screen.dart';
-import 'package:credithour/page1.dart';
-import 'package:credithour/page2.dart';
-import 'package:credithour/page3.dart';
+import 'package:credithour/login.%20sing/Login_Screen.dart';
+import 'package:credithour/splash/page1.dart';
+import 'package:credithour/splash/page2.dart';
+import 'package:credithour/splash/page3.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 class ssdd extends StatelessWidget

@@ -1,11 +1,24 @@
 import 'package:credithour/%D9%85%D9%88%D8%A7%D8%AF%20%D9%85%D8%B3%D8%AC%D9%84%D8%A9.dart';
 import 'package:credithour/%D9%86%D8%AA%D8%A7%D9%8A%D8%AC%20%D8%A7%D9%84%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86%D8%A7%D8%AA.dart';
 import 'package:credithour/Material.dart';
+import 'package:credithour/exam_screen.dart';
 import 'package:credithour/home.dart';
 import 'package:flutter/material.dart';
 
-class Materialselection extends StatelessWidget
+class Materialselection extends StatefulWidget
 {
+  @override
+  State<Materialselection> createState() => _MaterialselectionState();
+}
+
+class _MaterialselectionState extends State<Materialselection> {
+  void _selectScreen(int index) {
+    setState(() {
+      _selectedScreenIndex = index;
+    });
+  }
+  int _value = 1;
+  int _selectedScreenIndex = 0;
   @override
   Widget build(BuildContext context)
   {
@@ -30,7 +43,7 @@ class Materialselection extends StatelessWidget
         ),
       ),
       body:
-      Padding(padding: const EdgeInsets.all(20.0,),
+      Padding(padding: const EdgeInsets.all(0.0,),
           child: Column(
             children: [
               SingleChildScrollView(
@@ -43,18 +56,15 @@ class Materialselection extends StatelessWidget
                       Column(
                                children:
                               [
+
                                 SizedBox(
                                   height: 20.0,
                               ),
                                 CircleAvatar(
                                 radius: 18.0,
                                 backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/1903/1903162.png'),
-
                               ),
                                   TextButton(onPressed: (){}, child: Text('أدارة افراد'),),
-
-
-
                               ],
                               ),
                     ),
@@ -69,12 +79,8 @@ class Materialselection extends StatelessWidget
                                   CircleAvatar(
                                     radius: 18.0,
                                     backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/1903/1903162.png'),
-
                                   ),
                                   TextButton(onPressed: (){}, child: Text('Material'),),
-
-
-
                                 ],
                               ),
                             ),
@@ -89,12 +95,8 @@ class Materialselection extends StatelessWidget
                                   CircleAvatar(
                                     radius: 18.0,
                                     backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/1903/1903162.png'),
-
                                   ),
                                   TextButton(onPressed: (){}, child: Text('Material'),),
-
-
-
                                 ],
                               ),
                             ),
@@ -109,12 +111,8 @@ class Materialselection extends StatelessWidget
                                   CircleAvatar(
                                     radius: 18.0,
                                     backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/1903/1903162.png'),
-
                                   ),
                                   TextButton(onPressed: (){}, child: Text('Material'),),
-
-
-
                                 ],
                               ),
                             ),
@@ -129,12 +127,8 @@ class Materialselection extends StatelessWidget
                           CircleAvatar(
                             radius: 18.0,
                             backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/1903/1903162.png'),
-
                           ),
                           TextButton(onPressed: (){}, child: Text('Material'),),
-
-
-
                         ],
                       ),
                     ),
@@ -149,19 +143,45 @@ class Materialselection extends StatelessWidget
                           CircleAvatar(
                             radius: 18.0,
                             backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/1903/1903162.png'),
-
                           ),
                           TextButton(onPressed: (){}, child: Text('Material'),),
-
-
-
                         ],
                       ),
                     ),
-
-
                   ],
                 ),
+              ),
+              Row(
+                children: [
+                  Radio(
+                    value: 0,
+                    groupValue: _value,
+                    onChanged: (value) {
+                      setState(() {
+                        _value =0;
+                      });
+                    },
+                  ),
+
+                  SizedBox(
+                    width: 10,
+                  ),
+                  CircleAvatar(
+                    radius: 18.0,
+                    backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/1903/1903162.png'),
+
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'أدارة افراد',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
 
               Expanded(
@@ -169,7 +189,8 @@ class Materialselection extends StatelessWidget
 
                   child: Column(
                     children: [
-                      SizedBox(height: 20.0,),
+                      SizedBox(
+                        height: 20.0,),
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20.0,),
@@ -179,93 +200,106 @@ class Materialselection extends StatelessWidget
                         child: Row(
                           children: [
                             SizedBox(width: 20,),
-
-
                             Text('أعضاء هيئة التدريس',
                               style: TextStyle(
                                 fontSize: 25,
                                 color: Colors.white,
-
                               ),
-
                             ),
-
                           ],
                         ),
                       ),
                       SizedBox(height:20.0 ,),
                       Row(
-                        children:
-                        [
-                          IconButton(
-
-                              icon: Icon (Icons.check_box_outline_blank_rounded,
-
-                              ),
-                              onPressed: (){}
+                        children: [
+                          Radio(
+                            value: 1,
+                            groupValue: _value,
+                            onChanged: (value) {
+                              setState(() {
+                                _value =1;
+                              });
+                            },
                           ),
                           CircleAvatar(
                             radius: 25.0,
                             backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/3135/3135715.png'),
 
                           ),
-                          SizedBox(width: 10,),
-
-                          Text('D/..'),
-
-
-
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'D/...',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ],
                       ),
                       SizedBox(
                         height: 20,),
                       Row(
-                        children:
-                        [
-                          IconButton(
-
-                              icon: Icon (Icons.check_box_outline_blank_rounded,
-
-                              ),
-                              onPressed: (){}
+                        children: [
+                          Radio(
+                            value: 2,
+                            groupValue: _value,
+                            onChanged: (value) {
+                              setState(() {
+                                _value =2;
+                              });
+                            },
                           ),
                           CircleAvatar(
                             radius: 25.0,
                             backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/3135/3135715.png'),
 
                           ),
-                          SizedBox(width: 10,),
-                          Text('D/..'),
-
-
-
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'D/...',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ],
                       ),
                       SizedBox(
                         height: 20,),
                       Row(
-                        children:
-                        [
-                          IconButton(
-
-                              icon: Icon (Icons.check_box_outline_blank_rounded,
-
-                              ),
-                              onPressed: (){}
+                        children: [
+                          Radio(
+                            value: 3,
+                            groupValue: _value,
+                            onChanged: (value) {
+                              setState(() {
+                                _value =3;
+                              });
+                            },
                           ),
                           CircleAvatar(
                             radius: 25.0,
                             backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/3135/3135715.png'),
 
                           ),
-                          SizedBox(width: 10,),
-                          Text('D/..'),
-
-
-
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'D/...',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ],
                       ),
-                      SizedBox(height: 20.0,),
+                      SizedBox(
+                        height: 20.0,),
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20.0,),
@@ -287,77 +321,95 @@ class Materialselection extends StatelessWidget
                       ),
                       SizedBox(height:20.0 ,),
                       Row(
-                        children:
-                        [
-                          IconButton(
-
-                              icon: Icon (Icons.check_box_outline_blank_rounded,
-
-                              ),
-                              onPressed: (){}
+                        children: [
+                          Radio(
+                            value: 4,
+                            groupValue: _value,
+                            onChanged: (value) {
+                              setState(() {
+                                _value =4;
+                              });
+                            },
                           ),
                           CircleAvatar(
                             radius: 25.0,
                             backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/3135/3135715.png'),
 
                           ),
-                          SizedBox(width: 10,),
-                          Text('Eng/..'),
-
-
-
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'ENG/...',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ],
                       ),
                       SizedBox(
                         height: 20,),
                       Row(
-                        children:
-                        [
-                          IconButton(
-
-                              icon: Icon (Icons.check_box_outline_blank_rounded,
-
-                              ),
-                              onPressed: (){}
+                        children: [
+                          Radio(
+                            value: 5,
+                            groupValue: _value,
+                            onChanged: (value) {
+                              setState(() {
+                                _value =5;
+                              });
+                            },
                           ),
                           CircleAvatar(
                             radius: 25.0,
                             backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/3135/3135715.png'),
 
                           ),
-                          SizedBox(width: 10,),
-                          Text('Eng/..'),
-
-
-
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'ENG/...',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ],
                       ),
                       SizedBox(
                         height: 20,),
                       Row(
-                        children:
-                        [
-                          IconButton(
-
-                              icon: Icon (Icons.check_box_outline_blank_rounded,
-
-                              ),
-                              onPressed: (){}
+                        children: [
+                          Radio(
+                            value: 6,
+                            groupValue: _value,
+                            onChanged: (value) {
+                              setState(() {
+                                _value =6;
+                              });
+                            },
                           ),
                           CircleAvatar(
                             radius: 25.0,
-
-                            backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/3135/3135715.png',),
+                            backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/3135/3135715.png'),
 
                           ),
-                          SizedBox(width: 10,),
-                          Text('Eng/..'),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'ENG/...',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ],
                       ),
-
                     ],
                   ),
-
                 ),
               ),
               Container(
@@ -442,7 +494,7 @@ class Materialselection extends StatelessWidget
                               TextButton(onPressed: (){
                                 Navigator.push(context,
                                   MaterialPageRoute
-                                    (builder: (context)=> TaskScreen(),
+                                    (builder: (context)=> ExamScreen(),
                                   ),
                                 );
                               }, child: Text('نتائج الامتحانات',style: TextStyle(fontSize: 10,),),),
@@ -481,4 +533,5 @@ class Materialselection extends StatelessWidget
       ),
     );
   }
+
 }
